@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FRCountDownTimer" customModule="CountDownTimerView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="117"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Di-Tf-2pb">
+                    <rect key="frame" x="0.0" y="3" width="443" height="111"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCd-vA-4yL" customClass="TimeUnitView" customModule="CountDownTimerView" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="110" height="111"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bHY-yK-J3r">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="111"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="SSp-38-yQS">
+                                            <rect key="frame" x="42.5" y="0.0" width="25" height="74"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbJ-7C-ySc">
+                                            <rect key="frame" x="43" y="74" width="24" height="37"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="bHY-yK-J3r" firstAttribute="top" secondItem="JCd-vA-4yL" secondAttribute="top" id="1B4-Az-EcK"/>
+                                <constraint firstAttribute="bottom" secondItem="bHY-yK-J3r" secondAttribute="bottom" id="ZqA-92-oVg"/>
+                                <constraint firstItem="bHY-yK-J3r" firstAttribute="leading" secondItem="JCd-vA-4yL" secondAttribute="leading" id="ldT-2P-3Ey"/>
+                                <constraint firstAttribute="trailing" secondItem="bHY-yK-J3r" secondAttribute="trailing" id="znk-Gc-DrO"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                    <real key="value" value="0.80000000000000004"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCap" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
+                                    <color key="value" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="unitLabel" destination="JbJ-7C-ySc" id="xPM-ev-GlT"/>
+                                <outlet property="valueLabel" destination="SSp-38-yQS" id="nyl-xi-mLc"/>
+                            </connections>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7W7-7R-nCu" customClass="TimeUnitView" customModule="CountDownTimerView" customModuleProvider="target">
+                            <rect key="frame" x="111" y="0.0" width="110" height="111"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muT-K9-f8Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="111"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytH-ah-JZD">
+                                            <rect key="frame" x="42.5" y="0.0" width="25" height="74"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKB-Af-DdA">
+                                            <rect key="frame" x="40.5" y="59.5" width="29" height="51.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="muT-K9-f8Z" secondAttribute="trailing" id="MQj-l3-sQa"/>
+                                <constraint firstItem="muT-K9-f8Z" firstAttribute="leading" secondItem="7W7-7R-nCu" secondAttribute="leading" id="Qup-V7-gjN"/>
+                                <constraint firstItem="muT-K9-f8Z" firstAttribute="top" secondItem="7W7-7R-nCu" secondAttribute="top" id="RLh-43-OHb"/>
+                                <constraint firstAttribute="bottom" secondItem="muT-K9-f8Z" secondAttribute="bottom" id="UsN-JK-wt8"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                    <real key="value" value="0.80000000000000004"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCap" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
+                                    <color key="value" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="unitLabel" destination="GKB-Af-DdA" id="6cB-w4-uMh"/>
+                                <outlet property="valueLabel" destination="ytH-ah-JZD" id="ByM-BP-2m0"/>
+                            </connections>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5y-XD-H7o" customClass="TimeUnitView" customModule="CountDownTimerView" customModuleProvider="target">
+                            <rect key="frame" x="222" y="0.0" width="110" height="111"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WGY-ot-XSH">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="111"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Up3-Im-Lg2">
+                                            <rect key="frame" x="42.5" y="0.0" width="25" height="74"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUo-q5-RjI">
+                                            <rect key="frame" x="36" y="59.5" width="38.5" height="51.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="WGY-ot-XSH" secondAttribute="trailing" id="2Xo-7i-et1"/>
+                                <constraint firstItem="WGY-ot-XSH" firstAttribute="leading" secondItem="b5y-XD-H7o" secondAttribute="leading" id="4KR-8e-AZf"/>
+                                <constraint firstItem="WGY-ot-XSH" firstAttribute="top" secondItem="b5y-XD-H7o" secondAttribute="top" id="OnR-to-Tpt"/>
+                                <constraint firstAttribute="bottom" secondItem="WGY-ot-XSH" secondAttribute="bottom" id="rY9-7P-Vry"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                    <real key="value" value="0.80000000000000004"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCap" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
+                                    <color key="value" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="unitLabel" destination="GUo-q5-RjI" id="mDY-X7-C0I"/>
+                                <outlet property="valueLabel" destination="Up3-Im-Lg2" id="CA3-Re-ybY"/>
+                            </connections>
+                        </view>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8h7-n6-EjW" customClass="TimeUnitView" customModule="CountDownTimerView" customModuleProvider="target">
+                            <rect key="frame" x="333" y="0.0" width="110" height="111"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ppo-cm-QKe">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="111"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suD-W9-cMS">
+                                            <rect key="frame" x="42.5" y="0.0" width="25" height="74"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4o-US-Hto">
+                                            <rect key="frame" x="34" y="59.5" width="42" height="51.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="Ppo-cm-QKe" firstAttribute="leading" secondItem="8h7-n6-EjW" secondAttribute="leading" id="I3i-Ud-3dF"/>
+                                <constraint firstAttribute="bottom" secondItem="Ppo-cm-QKe" secondAttribute="bottom" id="LPe-oj-al8"/>
+                                <constraint firstItem="Ppo-cm-QKe" firstAttribute="top" secondItem="8h7-n6-EjW" secondAttribute="top" id="p1e-eb-r4i"/>
+                                <constraint firstAttribute="trailing" secondItem="Ppo-cm-QKe" secondAttribute="trailing" id="rEw-qg-MCK"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                    <real key="value" value="0.80000000000000004"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCap" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
+                                    <color key="value" red="0.13725490200000001" green="0.1215686275" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="unitLabel" destination="H4o-US-Hto" id="56e-kT-dig"/>
+                                <outlet property="valueLabel" destination="suD-W9-cMS" id="4EN-41-IT5"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="3Di-Tf-2pb" secondAttribute="height" multiplier="4:1" id="IGQ-RQ-aeb"/>
+                        <constraint firstItem="JCd-vA-4yL" firstAttribute="height" secondItem="3Di-Tf-2pb" secondAttribute="height" id="ISb-XY-5nN"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3Di-Tf-2pb" secondAttribute="trailing" id="7ur-ib-xbg"/>
+                <constraint firstItem="3Di-Tf-2pb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="OKp-9G-CSG"/>
+                <constraint firstItem="3Di-Tf-2pb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zbT-p0-z06"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="daysView" destination="JCd-vA-4yL" id="lTP-BP-hgC"/>
+                <outlet property="hoursView" destination="7W7-7R-nCu" id="Co3-mu-GTT"/>
+                <outlet property="minutesView" destination="b5y-XD-H7o" id="i6e-dQ-hIx"/>
+                <outlet property="secondsView" destination="8h7-n6-EjW" id="gai-D7-bGJ"/>
+            </connections>
+            <point key="canvasLocation" x="67.5" y="-136.5"/>
+        </view>
+    </objects>
+</document>
